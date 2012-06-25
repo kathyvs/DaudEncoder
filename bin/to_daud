@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require 'daud_coder'
+puts DaudCoder.to_daud ARGF.read
