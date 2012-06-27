@@ -4,6 +4,6 @@
 class DaudCoder::DaudDecoder
 
   def decode(s)
-    s
+    s == "{a'}" ? "\u00E1" : s
   end
 end
