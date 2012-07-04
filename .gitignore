@@ -4,6 +4,7 @@
 .bundle
 .config
 .project
+.settings
 coverage
 InstalledFiles
 lib/bundler/man

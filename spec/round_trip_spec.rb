@@ -1,3 +1,4 @@
+# encoding: UTF-8
 DAUD_STRINGS = [
   'plain',
   '{a:}'
@@ -5,7 +6,7 @@ DAUD_STRINGS = [
 
 UNICODE_STRINGS = [
   'plain', 
-  "\u00C6thelmearc"
+  "Æthelmearc"
 ]
 
 require 'daud_coder'
