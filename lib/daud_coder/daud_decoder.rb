@@ -8,9 +8,13 @@ class DaudCoder::DaudDecoder
     @@daud_map ||= DaudCoder::Encodings.daud_to_unicode_map 
   end
   
+  def target_encoding
+    @@encoding ||= Encoding.default_internal || Encoding.find("UTF-8")
+  end
+  
   def decode(s)
     m = /\{(..)\}/.match(s)
-    return s unless m
+    return s.encode(target_encoding) unless m
     daud_map[m[1]] || s
   end
   

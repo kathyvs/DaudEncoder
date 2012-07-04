@@ -10,19 +10,10 @@ class DaudCoder::Encodings
            ["'e", "è"]]
 
   def self.daud_to_unicode_map
-    result = {}
-    PAIRS.each do |d, u|
-      result[d] = u
-    end
-    puts result
-    result    
+    Hash[PAIRS]
   end
   
   def self.unicode_to_daud_map
-    result = {}
-    PAIRS.each do |d, u|
-      result[u] = d
-    end
-    result
+    Hash[PAIRS.map {|d, u| [u, d]}]
   end
 end
