@@ -1,12 +1,14 @@
 # encoding: UTF-8
 DAUD_STRINGS = [
   'plain',
-  '{a:}'
+  '{a:}',
+  'Mu{n~}oz'
 ]
 
 UNICODE_STRINGS = [
   'plain', 
-  "Æthelmearc"
+  "Æthelmearc",
+  "Berengière"
 ]
 
 require 'daud_coder'
@@ -34,7 +36,6 @@ describe DaudCoder do
       l = u.encode("ISO-8859-1")
       daud = DaudCoder.to_daud l
       back = DaudCoder.from_daud daud
-      back.encoding.should eq("default".encoding)
       back.encode("ISO-8859-1").should eq(l)
     end
   end

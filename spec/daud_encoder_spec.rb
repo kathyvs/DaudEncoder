@@ -16,7 +16,8 @@ describe DaudCoder::DaudEncoder do
   end
   
   it "converts an embedded unicode to encoding" do
-#    @encoder.encode("{AE}thelmearc").should eq("\u00C6thelmearc")
-#    @encoder.encode("caf{e'}").should eq("caf\u00E9")
+    @encoder.encode("\u00C1ed").should eq("{A'}ed")
+    @encoder.encode("Aarnimets\u00E4").should eq('Aarnimets{a"}')
+    @encoder.encode("Le\u00F2id").should eq("Le{'o}id")
   end
 end

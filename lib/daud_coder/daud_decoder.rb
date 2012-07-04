@@ -13,9 +13,20 @@ class DaudCoder::DaudDecoder
   end
   
   def decode(s)
-    m = /\{(..)\}/.match(s)
-    return s.encode(target_encoding) unless m
-    daud_map[m[1]] || s
+    result = ""
+    #until s.empty? do
+      m = /\{(..)\}/.match(s)
+      if (m)
+        result << s[0..m.begin(0) - 1] unless m.begin(0) == 0
+        result << (daud_map[m[1]] || m[0])
+        result << (s[m.end(0)..-1] || "")
+    #    s = s[m.end(0)..-1]
+      else 
+        result << s
+#        s = ""
+      end
+    #end
+    return result
   end
   
 end

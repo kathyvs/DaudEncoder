@@ -7,6 +7,10 @@ class DaudCoder::DaudEncoder
     @@daud_map ||= DaudCoder::Encodings.unicode_to_daud_map
   end
   def encode(s)
-    daud_map.has_key?(s) ? "\{#{daud_map[s]}\}" : s
+    result = ""
+    s.chars do |c|
+      result << (daud_map.has_key?(c) ? "\{#{daud_map[c]}\}" : c)
+    end
+    return result
   end
 end

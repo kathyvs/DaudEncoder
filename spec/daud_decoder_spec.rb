@@ -16,7 +16,7 @@ describe DaudCoder::DaudDecoder do
   end
   
   it "converts an embedded encoding to unicode" do
-#    @decoder.decode("{AE}thelmearc").should eq("\u00C6thelmearc")
-#    @decoder.decode("caf{e'}").should eq("caf\u00E9")
+    @decoder.decode("{AE}thelmearc").should eq("\u00C6thelmearc")
+    @decoder.decode("caf{e'}").should eq("caf\u00E9")
   end
 end
