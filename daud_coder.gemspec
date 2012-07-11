@@ -8,6 +8,6 @@ Gem::Specification.new do |s|
   s.description = "Encodes and decodes between standard text encoders and Da'ud notation."
   s.authors = ["Kathy Van Stone"]
   s.email = 'elsbeth@pobox.com'
-  s.files = ['lib/daud_coder.rb', 'lib/daud_coder/encodings.rb', 'lib/daud_coder/daud_encoder.rb', 'lib/daud_coder/daud_decoder', 'bin/parse_daud', 'bin/to_daud']
+  s.files = ['lib/daud_coder.rb', 'lib/daud_coder/encodings.rb', 'lib/daud_coder/daud_encoder.rb', 'lib/daud_coder/daud_decoder.rb', 'bin/parse_daud', 'bin/to_daud']
   s.homepage = 'http://github.com/kathyvs/DaudEncoder'
 end
