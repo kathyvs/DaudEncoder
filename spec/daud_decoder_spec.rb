@@ -19,4 +19,12 @@ describe DaudCoder::DaudDecoder do
     @decoder.decode("{AE}thelmearc").should eq("\u00C6thelmearc")
     @decoder.decode("caf{e'}").should eq("caf\u00E9")
   end
+  
+  it "converts multiple encodings to unicode" do
+    @decoder.decode("Aeda Dam{a'}in, r{i'}g Iarmuman").should eq("Aeda Dam\u00E1in, r\u00EDg Iarmuman")
+  end
+  
+  it "converts unknown encodings to iteself" do
+    @decoder.decode("A{xx}b").should eq("A{xx}b")
+  end
 end

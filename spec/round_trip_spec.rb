@@ -2,13 +2,15 @@
 DAUD_STRINGS = [
   'plain',
   '{a:}',
-  'Mu{n~}oz'
+  'Mu{n~}oz',
+  "{A'}ed All{a'}in"
 ]
 
 UNICODE_STRINGS = [
   'plain', 
   "Æthelmearc",
-  "Berengière"
+  "Berengière",
+  'Dated Names Found in Ó Corráin & Maguire'
 ]
 
 require 'daud_coder'

@@ -11,8 +11,10 @@ class DaudCoder::Encodings
            ['C,', 'Ç'],
            ["'e", 'è'],
            ["e'", 'é'],
+           ["i'", 'í'],
            ['n~', 'ñ'],
-           ["'o", "ò"]]
+           ["'o", 'ò'],
+           ["u'", 'ú']]
 
   def self.daud_to_unicode_map
     Hash[PAIRS]

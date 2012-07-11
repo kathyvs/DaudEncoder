@@ -20,4 +20,8 @@ describe DaudCoder::DaudEncoder do
     @encoder.encode("Aarnimets\u00E4").should eq('Aarnimets{a"}')
     @encoder.encode("Le\u00F2id").should eq("Le{'o}id")
   end
+  
+  it "converts multiple unicodes to encoding" do
+    @encoder.encode("\u00C1lfr\u00FAn ketta").should eq("{A'}lfr{u'}n ketta")
+  end
 end
