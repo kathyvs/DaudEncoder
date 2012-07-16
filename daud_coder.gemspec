@@ -3,7 +3,7 @@ Gem::Specification.new do |s|
   s.version = '1.0.0'
   s.executables << 'parse_daud'
   s.executables << 'to_daud'
-  s.date = '2012-07-11'
+  s.date = '2012-07-16'
   s.summary = "Da'ud notation encoder"
   s.description = "Encodes and decodes between standard text encoders and Da'ud notation."
   s.authors = ["Kathy Van Stone"]
