@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'daud_coder'
-  s.version = '0.9.0'
+  s.version = '1.0.0'
   s.executables << 'parse_daud'
   s.executables << 'to_daud'
   s.date = '2012-07-11'
